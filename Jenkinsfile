@@ -73,7 +73,7 @@ pipeline {
 		    steps {
 			echo "Executing job........ "
         			UiPathRunJob(
-					jobType: '', 
+					jobType: 'Testing', 
           				credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
           				failWhenJobFails: true,
           				folderName: "${UIPATH_ORCH_FOLDER_NAME}",
