@@ -10,6 +10,7 @@ pipeline {
 	        UIPATH_ORCH_LOGICAL_NAME = "atossgathen"
 	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
 	        UIPATH_ORCH_FOLDER_NAME = "NWLFolder"
+	        UIPATH_ORCH_USER_NAME = "WW930\A710005"
 	    }
 		stages {
 	
@@ -81,7 +82,7 @@ pipeline {
           				priority: 'Low',
           				processName: 'MessagePopupWindow',
           				resultFilePath: "Output\\${env.BUILD_NUMBER}",
-          				strategy: Dynamically(jobsCount: 1, machine: 'DESKTOP-MROI029', user: "WW930\A710005"), timeout: 3600, waitForJobCompletion: true, traceLoggingLevel: 'None'
+          				strategy: Dynamically(jobsCount: 1, machine: 'DESKTOP-MROI029', user: "${UIPATH_ORCH_USER_NAME}"), timeout: 3600, waitForJobCompletion: true, traceLoggingLevel: 'None'
         			)
 			}
 		}
