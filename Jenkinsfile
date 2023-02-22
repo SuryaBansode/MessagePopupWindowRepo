@@ -10,7 +10,7 @@ pipeline {
 	        UIPATH_ORCH_LOGICAL_NAME = "atossgathen"
 	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
 	        UIPATH_ORCH_FOLDER_NAME = "NWLFolder"
-	        UIPATH_ORCH_USER_NAME = "WW930/A710005"
+	        UIPATH_ORCH_USER_NAME = "WW930\\A710005"
 	    }
 		stages {
 	
@@ -73,6 +73,7 @@ pipeline {
 		    steps {
 			echo "Executing job........ "
         			UiPathRunJob(
+					jobType: 'Production (Unattended)', 
           				credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
           				failWhenJobFails: true,
           				folderName: "${UIPATH_ORCH_FOLDER_NAME}",
