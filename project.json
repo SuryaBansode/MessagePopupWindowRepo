@@ -6,14 +6,14 @@
     "UiPath.Excel.Activities": "[2.17.0-preview]",
     "UiPath.Mail.Activities": "[1.18.2]",
     "UiPath.System.Activities": "[22.10.4]",
-    "UiPath.Testing.Activities": "[22.12.0-preview]",
-    "UiPath.UIAutomation.Activities": "[22.10.4]"
+    "UiPath.Testing.Activities": "22.10.3",
+    "UiPath.UIAutomation.Activities": "22.10.4"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.12.0.0",
-  "projectVersion": "1.0.4",
+  "projectVersion": "1.0.5",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

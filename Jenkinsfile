@@ -66,6 +66,25 @@ pipeline {
 	                
 	            }
 	        }
+
+		// Run Test
+		stage ('RunTest') {
+		    steps {
+			echo "Executing job........ "
+        			UiPathRunJob(
+          				credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
+          				failWhenJobFails: true,
+          				folderName: "${UIPATH_ORCH_FOLDER_NAME}",
+          				orchestratorAddress: "${UIPATH_ORCH_URL}",
+          				orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
+          				parametersFilePath: '',
+          				priority: 'Low',
+          				processName: 'MessagePopupWindow',
+          				resultFilePath: "Output\\${env.BUILD_NUMBER}",
+          				strategy: Dynamically(jobsCount: 1, machine: 'DESKTOP-MROI029', user: 'WW930\A710005'), timeout: 3600, waitForJobCompletion: true, traceLoggingLevel: 'None'
+        			)
+			}
+		}
 	
 	         // Deploy to Production Step
 	        stage('Deploy to Production') {
