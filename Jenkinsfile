@@ -81,7 +81,7 @@ pipeline {
           				priority: 'Low',
           				processName: 'MessagePopupWindow',
           				resultFilePath: "Output\\${env.BUILD_NUMBER}",
-          				strategy: Dynamically(jobsCount: 1, machine: 'DESKTOP-MROI029', user: 'WW930\A710005'), timeout: 3600, waitForJobCompletion: true, traceLoggingLevel: 'None'
+          				strategy: Dynamically(jobsCount: 1, machine: 'DESKTOP-MROI029', user: "WW930\A710005"), timeout: 3600, waitForJobCompletion: true, traceLoggingLevel: 'None'
         			)
 			}
 		}
