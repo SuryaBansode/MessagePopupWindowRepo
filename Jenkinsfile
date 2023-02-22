@@ -10,7 +10,7 @@ pipeline {
 	        UIPATH_ORCH_LOGICAL_NAME = "atossgathen"
 	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
 	        UIPATH_ORCH_FOLDER_NAME = "NWLFolder"
-	        UIPATH_ORCH_USER_NAME = "WW930\A710005"
+	        UIPATH_ORCH_USER_NAME = "WW930/A710005"
 	    }
 		stages {
 	
