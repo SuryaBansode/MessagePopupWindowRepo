@@ -1,7 +1,7 @@
 pipeline {
 	    agent any
 	
-	        // Environment Variables for RPA - NWL
+	        // Environment Variables for RPA - NWL Ver1
 	        environment {
 	        MAJOR = '1'
 	        MINOR = '0'
