@@ -79,7 +79,7 @@ pipeline {
           				folderName: "${UIPATH_ORCH_FOLDER_NAME}",
           				orchestratorAddress: "${UIPATH_ORCH_URL}",
           				orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
-          				parametersFilePath: '',
+          				
           				priority: 'Low',
           				processName: 'MessagePopupWindow',
           				resultFilePath: "Output\\${env.BUILD_NUMBER}",
