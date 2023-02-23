@@ -9,7 +9,7 @@ pipeline {
 	        UIPATH_ORCH_URL = "https://cloud.uipath.com/"
 	        UIPATH_ORCH_LOGICAL_NAME = "atossgathen"
 	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
-	        UIPATH_ORCH_FOLDER_NAME = "NWLFolder"
+	        UIPATH_ORCH_FOLDER_NAME = "Shared"
 	        UIPATH_ORCH_USER_NAME = "WW930\\A710005"
 	    }
 		stages {
@@ -57,7 +57,6 @@ pipeline {
 						orchestratorAddress: "${UIPATH_ORCH_URL}",
 						orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
 						folderName: "${UIPATH_ORCH_FOLDER_NAME}",
-						environments: 'DEV',
 						//credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
 						credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
 						traceLevel: 'None',
