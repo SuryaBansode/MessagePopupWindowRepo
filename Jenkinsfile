@@ -9,7 +9,7 @@ pipeline {
 	        UIPATH_ORCH_URL = "https://cloud.uipath.com/"
 	        UIPATH_ORCH_LOGICAL_NAME = "atossgathen"
 	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
-	        UIPATH_ORCH_FOLDER_NAME = "Shared"
+	        UIPATH_ORCH_FOLDER_NAME = "My Workspace"
 	        UIPATH_ORCH_USER_NAME = "WW930\\A710005"
 	    }
 		stages {
@@ -81,7 +81,7 @@ pipeline {
           				orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
           				parametersFilePath: '',
           				priority: 'Low',
-          				processName: 'MessagePopupWindow',
+          				processName: 'MessagePopupWindow_Main.xaml',
           				resultFilePath: "Output\\${env.BUILD_NUMBER}",
           				strategy: Dynamically(jobsCount: 1, machine: 'DESKTOP-MROI029', user: "${UIPATH_ORCH_USER_NAME}"), timeout: 3600, waitForJobCompletion: true, traceLevel: 'None'
         			)
