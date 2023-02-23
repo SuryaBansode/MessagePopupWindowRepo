@@ -1,7 +1,7 @@
 pipeline {
 	    agent any
 	
-	        // Environment Variables for RPA - NWL Ver4
+	        // Environment Variables for RPA - NWL Ver3
 	        environment {
 	        MAJOR = '1'
 	        MINOR = '0'
@@ -9,7 +9,7 @@ pipeline {
 	        UIPATH_ORCH_URL = "https://cloud.uipath.com/"
 	        UIPATH_ORCH_LOGICAL_NAME = "atossgathen"
 	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
-	        UIPATH_ORCH_FOLDER_NAME = "NFLFolder"
+	        UIPATH_ORCH_FOLDER_NAME = "NWLFolder"
 	        UIPATH_ORCH_USER_NAME = "WW930\\A710005"
 	    }
 		stages {
