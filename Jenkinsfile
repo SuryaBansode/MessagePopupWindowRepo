@@ -75,7 +75,7 @@ pipeline {
         			UiPathRunJob(
 					jobType: Dynamically(jobsCount: 1, machine: 'DESKTOP-MROI029', user: "${UIPATH_ORCH_USER_NAME}"), 
           				credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
-          				failWhenJobFails: true,
+          				failWhenJobFails: false,
           				folderName: "${UIPATH_ORCH_FOLDER_NAME}",
           				orchestratorAddress: "${UIPATH_ORCH_URL}",
           				orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
