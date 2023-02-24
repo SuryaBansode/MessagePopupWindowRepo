@@ -73,7 +73,7 @@ pipeline {
 		    steps {
 			echo "Executing job........ "
         			UiPathRunJob(
-					jobType: Dynamically(jobsCount: 1, machine: 'DESKTOP-MROI029', user: "${UIPATH_ORCH_USER_NAME}"), 
+					jobType: 'Unattended', 
           				credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
           				failWhenJobFails: false,
           				folderName: "${UIPATH_ORCH_FOLDER_NAME}",
